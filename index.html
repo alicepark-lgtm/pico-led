@@ -70,7 +70,7 @@
 <script>
   // MQTT 연결
   const client = mqtt.connect('wss://broker.hivemq.com:8884/mqtt');
-
+  client.publish('pico-led/pico-led/s10101', value.toString());
   const slider = document.getElementById('brightnessSlider');
   const valueText = document.getElementById('brightnessValue');
   const statusText = document.getElementById('status');
